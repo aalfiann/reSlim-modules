@@ -5,3 +5,11 @@ reSlim-modules
 
 reSlim-modules is the list of the modules available from author to be using with reSlim.<br>
 reSlim is based on [Slim Framework version 3](http://www.slimframework.com/).<br>
+
+How to Contribute
+-----------------
+### Pull Requests
+
+1. Fork the reSlim-modules repository
+2. Create a new branch and create new folder for each different modules or improvement
+3. Send a pull request from each branch to the master branch
