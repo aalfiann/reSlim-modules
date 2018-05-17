@@ -20,7 +20,7 @@ use PDO;                                            //To connect with database
         protected $information = [
             'module' => [
                 'name' => 'FirstMod',
-                'uri' => 'https://github.com/aalfiann/reSlim-modules/first_mod',
+                'uri' => 'https://github.com/aalfiann/reSlim-modules/tree/master/first_mod',
                 'description' => 'This is my First Modules',
                 'version' => '1.0'
             ],
