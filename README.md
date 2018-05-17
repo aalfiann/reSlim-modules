@@ -6,6 +6,11 @@ reSlim-modules
 reSlim-modules is the list of the modules available from author to be using with reSlim.<br>
 reSlim is based on [Slim Framework version 3](http://www.slimframework.com/).<br>
 
+Requirements
+---------------
+
+1. This feature is available since reSlim version 1.9.0
+
 How to Contribute
 -----------------
 ### Pull Requests
