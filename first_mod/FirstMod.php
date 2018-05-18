@@ -18,15 +18,22 @@ use PDO;                                            //To connect with database
     class FirstMod {
         // modules information var
         protected $information = [
-            'module' => [
+            'package' => [
                 'name' => 'FirstMod',
                 'uri' => 'https://github.com/aalfiann/reSlim-modules/tree/master/first_mod',
-                'description' => 'This is my First Modules',
-                'version' => '1.0'
-            ],
-            'author' => [
-                'name' => 'M ABD AZIZ ALFIAN',
-                'uri' => 'https://github.com/aalfiann'
+                'description' => 'This is my first reslim modules',
+                'version' => '1.0',
+                'require' => [
+                    'reSlim' => '1.9.0'
+                ],
+                'license' => [
+                    'type' => 'MIT',
+                    'uri' => 'https://github.com/aalfiann/reSlim-modules/tree/master/first_mod/LICENSE.md'
+                ],
+                'author' => [
+                    'name' => 'M ABD AZIZ ALFIAN',
+                    'uri' => 'https://github.com/aalfiann'
+                ],
             ]
         ];
 
