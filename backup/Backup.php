@@ -180,6 +180,12 @@ use PDO;                                            //To connect with database
             $data.="SET FOREIGN_KEY_CHECKS=1;";
              
             if (!is_dir($this->folderbackupdb)) mkdir($this->folderbackupdb,0775,true);
+            $newcontent = '<?php header(\'Content-type:application/json; charset=utf-8\');header("Access-Control-Allow-Origin: *");header("Access-Control-Allow-Headers: X-Requested-With, Content-Type, Accept, Origin, Authorization");header(\'HTTP/1.0 403 Forbidden\');echo \'{"status": "error","code": "403","message": "This page is forbidden."}\';?>';
+            if(!file_exists($this->folderbackupdb.'/index.php')){
+                $ihandle = fopen($this->folderbackupdb.'/index.php','w+'); 
+                fwrite($ihandle,$newcontent); 
+                fclose($ihandle);
+            }
             //save filename
             $filename = $this->folderbackupdb.'/backup_'.$tablename.'_'.date('Y-m-d_H.i.s',time()).'.sql';
             if($this->writeUTF8filename($filename,$data)){
