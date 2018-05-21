@@ -11,6 +11,11 @@ Requirements
 
 1. This feature is available since reSlim version 1.9.0
 
+How to create a module?
+---------------
+1. For basic and very simple modules, You can learn from this source >> [first_mod](https://github.com/aalfiann/reSlim-modules/tree/master/first_mod)
+2. For advanced like CRUD modules, You can start to learn from this source >> [crud_mod](https://github.com/aalfiann/reSlim-modules/tree/master/crud_mod)
+
 How to Contribute
 -----------------
 ### Pull Requests
