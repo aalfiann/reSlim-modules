@@ -12,7 +12,7 @@ use PDO;                                            //To connect with database
      * @package    modules/backup
      * @author     M ABD AZIZ ALFIAN <github.com/aalfiann>
      * @copyright  Copyright (c) 2018 M ABD AZIZ ALFIAN
-     * @license    https://github.com/aalfiann/reSlim/blob/master/license.md  MIT License
+     * @license    https://github.com/aalfiann/reSlim-modules/tree/master/backup/LICENSE.md  MIT License
      */
     class Backup {
         // modules information var
@@ -283,6 +283,7 @@ use PDO;                                            //To connect with database
 
         private function scan_dir($dir) {
             $list = array(); //main array
+            if (!is_dir($this->folderbackupdb)) mkdir($this->folderbackupdb,0775,true);
             if(is_dir($dir)){
                 if($dh = opendir($dir)){
                     while(($file = readdir($dh)) != false){
