@@ -12,7 +12,7 @@ use \classes\SimpleCache as SimpleCache;                        //SimpleCache cl
 use \classes\JSON as JSON;                                      //JSON class                    >> To handle JSON in better way (also for debug purpose)
 
     // Get module information (include cache)
-    $app->get('/modules/first_mod/get/info/', function (Request $request, Response $response) {
+    $app->get('/first_mod/get/info/', function (Request $request, Response $response) {
         $fm = new FirstMod($this->db);
         $body = $response->getBody();
         $response = $this->cache->withEtag($response, $this->etag2hour.'-'.trim($_SERVER['REQUEST_URI'],'/'));
@@ -27,7 +27,7 @@ use \classes\JSON as JSON;                                      //JSON class    
 
     
     // Token Validation 
-    $app->get('/modules/first_mod/check/token/{username}/{token}', function (Request $request, Response $response) {
+    $app->get('/first_mod/check/token/{username}/{token}', function (Request $request, Response $response) {
         $fm = new FirstMod($this->db);
         $fm->username = $request->getAttribute('username');
         $fm->token = $request->getAttribute('token');

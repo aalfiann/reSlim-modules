@@ -14,7 +14,7 @@ use \classes\SimpleCache as SimpleCache;                        //SimpleCache cl
 use \classes\JSON as JSON;                                      //JSON class                    >> To handle JSON in better way (also for debug purpose)
 
     // Get module information (include cache)
-    $app->get('/modules/crud_mod/get/info/', function (Request $request, Response $response) {
+    $app->get('/crud_mod/get/info/', function (Request $request, Response $response) {
         $cm = new CrudMod($this->db);
         $body = $response->getBody();
         $response = $this->cache->withEtag($response, $this->etag2hour.'-'.trim($_SERVER['REQUEST_URI'],'/'));
@@ -28,7 +28,7 @@ use \classes\JSON as JSON;                                      //JSON class    
     })->add(new ApiKey);
 
     // Installation 
-    $app->get('/modules/crud_mod/install/{username}/{token}', function (Request $request, Response $response) {
+    $app->get('/crud_mod/install/{username}/{token}', function (Request $request, Response $response) {
         $cm = new CrudMod($this->db);
         $cm->username = $request->getAttribute('username');
         $cm->token = $request->getAttribute('token');
@@ -38,7 +38,7 @@ use \classes\JSON as JSON;                                      //JSON class    
     });
 
     // Uninstall (This will clear all data) 
-    $app->get('/modules/crud_mod/uninstall/{username}/{token}', function (Request $request, Response $response) {
+    $app->get('/crud_mod/uninstall/{username}/{token}', function (Request $request, Response $response) {
         $cm = new CrudMod($this->db);
         $cm->username = $request->getAttribute('username');
         $cm->token = $request->getAttribute('token');
@@ -52,7 +52,7 @@ use \classes\JSON as JSON;                                      //JSON class    
 
 
     // POST api to create new data
-    $app->post('/modules/crud_mod/create', function (Request $request, Response $response) {
+    $app->post('/crud_mod/create', function (Request $request, Response $response) {
         $cm = new CrudMod($this->db);
         $datapost = $request->getParsedBody();
         $cm->username = $datapost['Username'];
@@ -74,7 +74,7 @@ use \classes\JSON as JSON;                                      //JSON class    
 
 
     // POST api to update data
-    $app->post('/modules/crud_mod/update', function (Request $request, Response $response) {
+    $app->post('/crud_mod/update', function (Request $request, Response $response) {
         $cm = new CrudMod($this->db);
         $datapost = $request->getParsedBody();    
         $cm->username = $datapost['Username'];
@@ -98,7 +98,7 @@ use \classes\JSON as JSON;                                      //JSON class    
 
 
     // POST api to delete data
-    $app->post('/modules/crud_mod/delete', function (Request $request, Response $response) {
+    $app->post('/crud_mod/delete', function (Request $request, Response $response) {
         $cm = new CrudMod($this->db);
         $datapost = $request->getParsedBody();    
         $cm->id = $datapost['ID'];
@@ -113,7 +113,7 @@ use \classes\JSON as JSON;                                      //JSON class    
 
 
     // GET api to show all data (index) with pagination server side
-    $app->get('/modules/crud_mod/index/{username}/{token}/{page}/{itemsperpage}/', function (Request $request, Response $response) {
+    $app->get('/crud_mod/index/{username}/{token}/{page}/{itemsperpage}/', function (Request $request, Response $response) {
         $cm = new CrudMod($this->db);
         $cm->search = filter_var((empty($_GET['query'])?'':$_GET['query']),FILTER_SANITIZE_STRING);
         $cm->username = $request->getAttribute('username');
@@ -127,7 +127,7 @@ use \classes\JSON as JSON;                                      //JSON class    
 
 
     // GET api to read single data
-    $app->get('/modules/crud_mod/read/{id}/{username}/{token}', function (Request $request, Response $response) {
+    $app->get('/crud_mod/read/{id}/{username}/{token}', function (Request $request, Response $response) {
         $cm = new CrudMod($this->db);
         $cm->username = $request->getAttribute('username');
         $cm->token = $request->getAttribute('token');

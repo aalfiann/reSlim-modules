@@ -12,7 +12,7 @@ use \classes\SimpleCache as SimpleCache;                        //SimpleCache cl
 use \classes\JSON as JSON;                                      //JSON class                    >> To handle JSON in better way (also for debug purpose)
 
     // Get module information (include cache)
-    $app->get('/modules/backup/get/info/', function (Request $request, Response $response) {
+    $app->get('/backup/get/info/', function (Request $request, Response $response) {
         $backup = new Backup($this->db);
         $body = $response->getBody();
         $response = $this->cache->withEtag($response, $this->etag2hour.'-'.trim($_SERVER['REQUEST_URI'],'/'));
@@ -26,7 +26,7 @@ use \classes\JSON as JSON;                                      //JSON class    
     })->add(new ApiKey);
 
     // Backup all tables
-    $app->get('/modules/backup/all/{username}/{token}', function (Request $request, Response $response) {
+    $app->get('/backup/all/{username}/{token}', function (Request $request, Response $response) {
         $backup = new Backup($this->db);
         $backup->username = $request->getAttribute('username');
         $backup->token = $request->getAttribute('token');
@@ -36,7 +36,7 @@ use \classes\JSON as JSON;                                      //JSON class    
     });
     
     // Backup for spesific table only
-    $app->get('/modules/backup/table/{tablename}/{username}/{token}', function (Request $request, Response $response) {
+    $app->get('/backup/table/{tablename}/{username}/{token}', function (Request $request, Response $response) {
         $backup = new Backup($this->db);
         $backup->username = $request->getAttribute('username');
         $backup->token = $request->getAttribute('token');
@@ -46,7 +46,7 @@ use \classes\JSON as JSON;                                      //JSON class    
     });
 
     // Show all backup files
-    $app->get('/modules/backup/show/all/{username}/{token}', function (Request $request, Response $response) {
+    $app->get('/backup/show/all/{username}/{token}', function (Request $request, Response $response) {
         $backup = new Backup($this->db);
         $backup->username = $request->getAttribute('username');
         $backup->token = $request->getAttribute('token');
