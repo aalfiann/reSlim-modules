@@ -9,7 +9,7 @@ use PDO;                                            //To connect with database
 	/**
      * For handle database backup in reSlim
      *
-     * @package    reSlim-modules
+     * @package    modules/backup
      * @author     M ABD AZIZ ALFIAN <github.com/aalfiann>
      * @copyright  Copyright (c) 2018 M ABD AZIZ ALFIAN
      * @license    https://github.com/aalfiann/reSlim/blob/master/license.md  MIT License

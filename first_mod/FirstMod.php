@@ -10,7 +10,7 @@ use PDO;                                            //To connect with database
 	/**
      * This is my First Modules class
      *
-     * @package    reSlim-modules
+     * @package    modules/first_mod
      * @author     M ABD AZIZ ALFIAN <github.com/aalfiann>
      * @copyright  Copyright (c) 2018 M ABD AZIZ ALFIAN
      * @license    https://github.com/aalfiann/reSlim/blob/master/license.md  MIT License
