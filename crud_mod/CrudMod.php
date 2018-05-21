@@ -38,7 +38,10 @@ use PDO;                                            //To connect with database
         ];
 
         // database var
-        protected $db,$baseurl;
+		protected $db;
+		
+		//base var
+        protected $basepath,$baseurl;
 
         //master var
         var $username,$token;
@@ -55,11 +58,8 @@ use PDO;                                            //To connect with database
         //construct database object
         function __construct($db=null,$baseurl=null) {
 			if (!empty($db)) $this->db = $db;
-            if (!empty($baseurl)) {
-                $this->baseurl = $baseurl;
-            } else {
-                $this->baseurl = (($this->isHttps())?'https://':'http://').$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']);
-            }
+            $this->baseurl = (($this->isHttps())?'https://':'http://').$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']);
+            $this->basepath = $_SERVER['DOCUMENT_ROOT'].dirname($_SERVER['PHP_SELF']);
         }
         
         //Detect scheme host
@@ -101,7 +101,8 @@ use PDO;                                            //To connect with database
 						$data = [
                             'status' => 'success',
 							'code' => 'RS101',
-                            'message' => CustomHandlers::getreSlimMessage('RS101')
+							'message' => CustomHandlers::getreSlimMessage('RS101'),
+							'notice' => 'For security reason, please rename or remove the router url for install and uninstall!'
 						];	
 					} else {
     					$data = [
