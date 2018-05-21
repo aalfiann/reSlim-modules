@@ -37,7 +37,10 @@ use PDO;                                            //To connect with database
         ];
 
         // database var
-        protected $db,$baseurl;
+        protected $db;
+        
+        // base var
+        protected $basepath,$baseurl;
 
         //master var
         var $username,$token;
@@ -46,13 +49,10 @@ use PDO;                                            //To connect with database
         var $folderbackupdb = 'backup-db';
         
         //construct database object
-        function __construct($db=null,$baseurl=null) {
+        function __construct($db=null) {
 			if (!empty($db)) $this->db = $db;
-            if (!empty($baseurl)) {
-                $this->baseurl = $baseurl;
-            } else {
-                $this->baseurl = (($this->isHttps())?'https://':'http://').$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']);
-            }
+            $this->baseurl = (($this->isHttps())?'https://':'http://').$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']);
+            $this->basepath = $_SERVER['DOCUMENT_ROOT'].dirname($_SERVER['PHP_SELF']);
         }
         
         //Detect scheme host
@@ -100,13 +100,80 @@ use PDO;                                            //To connect with database
         /* Show all backup files */
         public function showAllFiles(){
             if (Auth::validToken($this->db,$this->token,$this->username)){
-                return JSON::encode($this->scan_dir('backup-db'),true);
+                $data = $this->scan_dir('backup-db');
+                $data += [
+	    			'status' => 'success',
+					'code' => 'RS501',
+        	    	'message' => CustomHandlers::getreSlimMessage('RS501')
+				]; 
             } else {
                 $data = [
 	    			'status' => 'error',
 					'code' => 'RS401',
         	    	'message' => CustomHandlers::getreSlimMessage('RS401')
 				];
+            }
+            return JSON::encode($data,true);
+        }
+
+        public function deleteFile($filename){
+            if (Auth::validToken($this->db,$this->token,$this->username)){
+                if (file_exists($this->folderbackupdb.'/'.$filename)){
+                    if (unlink($this->folderbackupdb.'/'.$filename)){
+                        $data = [
+                            'status' => 'success',
+                            'code' => 'RS104',
+                            'message' => CustomHandlers::getreSlimMessage('RS104')
+                        ];
+                    } else {
+                        $data = [
+                            'status' => 'error',
+                            'code' => 'RS204',
+                            'message' => CustomHandlers::getreSlimMessage('RS204')
+                        ]; 
+                    }
+                } else {
+                    $data = [
+                        'status' => 'error',
+                        'code' => 'RS601',
+                        'message' => CustomHandlers::getreSlimMessage('RS601')
+                    ];
+                }
+            } else {
+                $data = [
+	    			'status' => 'error',
+					'code' => 'RS401',
+        	    	'message' => CustomHandlers::getreSlimMessage('RS401')
+				];
+            }
+            return JSON::encode($data,true);
+        }
+
+        public function deleteAll($wildcard="*"){
+            $wildcard = (empty($wildcard)?'*':$wildcard);
+            if (file_exists($this->folderbackupdb)) {
+                //Auto delete useless cache
+                $files = glob($this->folderbackupdb.'/'.$wildcard,GLOB_NOSORT);
+                $deleted = -1;
+                foreach ($files as $file) {
+                    if (is_file($file)) {
+                        unlink($file);
+                        $deleted++;
+                    }
+                }
+                $data = [
+                    'status' => 'success',
+                    'code' => 'RS104',
+                    'message' => CustomHandlers::getreSlimMessage('RS104'),
+                    'total_deleted' => $deleted,
+                    'execution_time' => (microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"])
+                ];
+            } else {
+                $data = [
+                    'status' => 'error',
+                    'code' => 'RS601',
+                    'message' => CustomHandlers::getreSlimMessage('RS601')
+                ];
             }
             return JSON::encode($data,true);
         }
@@ -219,7 +286,7 @@ use PDO;                                            //To connect with database
             if(is_dir($dir)){
                 if($dh = opendir($dir)){
                     while(($file = readdir($dh)) != false){
-                        if($file == "." or $file == ".."){
+                        if($file == "." or $file == ".." or $file == "index.php"){
                             //...
                         } else { //create object with two fields
                             $list3 = array(
