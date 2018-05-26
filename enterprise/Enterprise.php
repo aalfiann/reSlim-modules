@@ -60,34 +60,41 @@ use PDO;                                            //To connect with database
          */
         public function install(){
             if (Auth::validToken($this->db,$this->token,$this->username)){
-                $role = Auth::getRoleID($this->db,$this->token);
-    		    try {
-    				$this->db->beginTransaction();
-	    			$sql = file_get_contents(dirname(__FILE__).'/enterprise.sql');
-					$stmt = $this->db->prepare($sql);
-					if ($stmt->execute()) {
+				$role = Auth::getRoleID($this->db,$this->token);
+				if ($role == 1){
+					try {
+						$this->db->beginTransaction();
+						$sql = file_get_contents(dirname(__FILE__).'/enterprise.sql');
+						$stmt = $this->db->prepare($sql);
+						if ($stmt->execute()) {
+							$data = [
+								'status' => 'success',
+								'code' => 'RS101',
+								'message' => CustomHandlers::getreSlimMessage('RS101')
+							];	
+						} else {
+							$data = [
+								'status' => 'error',
+								'code' => 'RS201',
+								'message' => CustomHandlers::getreSlimMessage('RS201')
+							];
+						}
+						$this->db->commit();
+					} catch (PDOException $e) {
 						$data = [
-                            'status' => 'success',
-							'code' => 'RS101',
-							'message' => CustomHandlers::getreSlimMessage('RS101'),
-							'notice' => 'For security reason, please rename or remove the router url for install and uninstall!'
-						];	
-					} else {
-    					$data = [
-					    	'status' => 'error',
-				    		'code' => 'RS201',
-			    			'message' => CustomHandlers::getreSlimMessage('RS201')
-		    			];
-	    			}
-	    			$this->db->commit();
-    			} catch (PDOException $e) {
-			        $data = [
-    	    			'status' => 'error',
-	    				'code' => $e->getCode(),
-    	    			'message' => $e->getMessage()
-    			    ];
-	    		    $this->db->rollBack();
-    		    }
+							'status' => 'error',
+							'code' => $e->getCode(),
+							'message' => $e->getMessage()
+						];
+						$this->db->rollBack();
+					}
+				} else {
+					$data = [
+						'status' => 'error',
+						'code' => 'RS404',
+						'message' => CustomHandlers::getreSlimMessage('RS404')
+					];
+				}
             } else {
                 $data = [
 	    			'status' => 'error',
@@ -105,33 +112,41 @@ use PDO;                                            //To connect with database
          */
         public function uninstall(){
             if (Auth::validToken($this->db,$this->token,$this->username)){
-                $role = Auth::getRoleID($this->db,$this->token);
-    		    try {
-    				$this->db->beginTransaction();
-	    			$sql = "DROP TABLE IF EXISTS sys_company;DROP TABLE IF EXISTS sys_user;";
-					$stmt = $this->db->prepare($sql);
-					if ($stmt->execute()) {
+				$role = Auth::getRoleID($this->db,$this->token);
+				if ($role == 1){
+					try {
+						$this->db->beginTransaction();
+						$sql = "DROP TABLE IF EXISTS sys_company;DROP TABLE IF EXISTS sys_user;";
+						$stmt = $this->db->prepare($sql);
+						if ($stmt->execute()) {
+							$data = [
+								'status' => 'success',
+								'code' => 'RS104',
+								'message' => CustomHandlers::getreSlimMessage('RS104')
+							];	
+						} else {
+							$data = [
+								'status' => 'error',
+								'code' => 'RS204',
+								'message' => CustomHandlers::getreSlimMessage('RS204')
+							];
+						}
+						$this->db->commit();
+					} catch (PDOException $e) {
 						$data = [
-							'status' => 'success',
-							'code' => 'RS104',
-							'message' => CustomHandlers::getreSlimMessage('RS104')
-						];	
-					} else {
-    					$data = [
-					    	'status' => 'error',
-				    		'code' => 'RS204',
-			    			'message' => CustomHandlers::getreSlimMessage('RS204')
-		    			];
-	    			}
-	    			$this->db->commit();
-    			} catch (PDOException $e) {
-			        $data = [
-    	    			'status' => 'error',
-	    				'code' => $e->getCode(),
-    	    			'message' => $e->getMessage()
-    			    ];
-	    		    $this->db->rollBack();
-    		    }
+							'status' => 'error',
+							'code' => $e->getCode(),
+							'message' => $e->getMessage()
+						];
+						$this->db->rollBack();
+					}
+				} else {
+					$data = [
+						'status' => 'error',
+						'code' => 'RS404',
+						'message' => CustomHandlers::getreSlimMessage('RS404')
+					];
+				}
             } else {
                 $data = [
 	    			'status' => 'error',
