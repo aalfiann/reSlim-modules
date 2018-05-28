@@ -16,43 +16,27 @@ use PDO;                                            //To connect with database
      * @license    https://github.com/aalfiann/reSlim-modules/tree/master/enterprise/LICENSE.md  MIT License
      */
     class Enterprise {
-        // modules information var
-        protected $information = [
-            'package' => [
-                'name' => 'Enterprise',
-                'uri' => 'https://github.com/aalfiann/reSlim-modules/tree/master/enterprise',
-                'description' => 'Enterprise management system',
-                'version' => '1.0',
-                'require' => [
-                    'reSlim' => '1.9.0'
-                ],
-                'license' => [
-                    'type' => 'MIT',
-                    'uri' => 'https://github.com/aalfiann/reSlim-modules/tree/master/enterprise/LICENSE.md'
-                ],
-                'author' => [
-                    'name' => 'M ABD AZIZ ALFIAN',
-                    'uri' => 'https://github.com/aalfiann'
-                ],
-            ]
-        ];
 
         // database var
-        protected $db;
+		protected $db;
+		
+		//base var
+        protected $basepath,$baseurl,$basemod;
 
         //master var
 		var $username,$token;
         
         //construct database object
         function __construct($db=null) {
-			if (!empty($db)) {
-    	        $this->db = $db;
-        	}
+			if (!empty($db)) $this->db = $db;
+            $this->baseurl = (($this->isHttps())?'https://':'http://').$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']);
+            $this->basepath = $_SERVER['DOCUMENT_ROOT'].dirname($_SERVER['PHP_SELF']);
+			$this->basemod = dirname(__FILE__);
         }
 
         //Get modules information
         public function viewInfo(){
-            return JSON::encode($this->information,true);
+            return file_get_contents($this->basemod.'/package.json');
         }
 
         /**
