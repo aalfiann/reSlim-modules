@@ -1,0 +1,19 @@
+{
+    "package": {
+        "name": "FirstMod",
+        "url": "https://github.com/aalfiann/reSlim-modules/tree/master/first_mod",
+        "description": "This is my first reslim modules",
+        "version": "1.0",
+        "require": {
+            "reSlim": "1.9.0"
+        },
+        "license": {
+            "type": "MIT",
+            "url": "https://github.com/aalfiann/reSlim-modules/tree/master/first_mod/LICENSE.md"
+        },
+        "author": {
+            "name": "M ABD AZIZ ALFIAN",
+            "url": "https://github.com/aalfiann"
+        }
+    }
+}

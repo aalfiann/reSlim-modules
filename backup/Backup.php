@@ -12,35 +12,15 @@ use PDO;                                            //To connect with database
      * @package    modules/backup
      * @author     M ABD AZIZ ALFIAN <github.com/aalfiann>
      * @copyright  Copyright (c) 2018 M ABD AZIZ ALFIAN
-     * @license    https://github.com/aalfiann/reSlim-modules/tree/master/backup/LICENSE.md  MIT License
+     * @license    https://github.com/aalfiann/reSlim-modules/tree/master/backup/LICENSE.md MIT License
      */
     class Backup {
-        // modules information var
-        protected $information = [
-            'package' => [
-                'name' => 'Backup',
-                'uri' => 'https://github.com/aalfiann/reSlim-modules/tree/master/backup',
-                'description' => 'For handle database backup in reSlim',
-                'version' => '1.0',
-                'require' => [
-                    'reSlim' => '1.9.0'
-                ],
-                'license' => [
-                    'type' => 'MIT',
-                    'uri' => 'https://github.com/aalfiann/reSlim-modules/tree/master/backup/LICENSE.md'
-                ],
-                'author' => [
-                    'name' => 'M ABD AZIZ ALFIAN',
-                    'uri' => 'https://github.com/aalfiann'
-                ],
-            ]
-        ];
 
         // database var
         protected $db;
         
         // base var
-        protected $basepath,$baseurl;
+        protected $basepath,$baseurl,$basemod;
 
         //master var
         var $username,$token;
@@ -53,6 +33,7 @@ use PDO;                                            //To connect with database
 			if (!empty($db)) $this->db = $db;
             $this->baseurl = (($this->isHttps())?'https://':'http://').$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']);
             $this->basepath = $_SERVER['DOCUMENT_ROOT'].dirname($_SERVER['PHP_SELF']);
+            $this->basemod = dirname(__FILE__);
         }
         
         //Detect scheme host
@@ -77,7 +58,7 @@ use PDO;                                            //To connect with database
 
         //Get modules information
         public function viewInfo(){
-            return JSON::encode($this->information,true);
+            return file_get_contents($this->basemod.'/package.json');
         }
 
 
