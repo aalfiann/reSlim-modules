@@ -9,8 +9,3 @@
 2. Go to your reSlim server and go to directory modules
 3. Create new folder **backup** and paste all files.
 4. Done
-
-### How to install module with Packager module reSlim?
-
-1. Only superuser account is able to install the module.
-2. Make Ajax GET request to url >> <br>http://{yourdomain.com}/api/packager/install/zip/safely/{yourusername}/{yourtoken}/?lang=en&source={zip archive source}&namespace={modul namespace}

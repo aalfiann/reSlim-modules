@@ -11,6 +11,16 @@ Requirements
 
 1. This feature is available since reSlim version 1.9.0
 
+How to install module manually?
+---------------
+
+How to install module with Packager?
+---------------
+
+1. Packager module is available since reSlim version 1.10.0
+2. Only superuser account is able to install the module.
+3. Make Ajax GET request to url >> <br>http://{yourdomain.com}/api/packager/install/zip/safely/{yourusername}/{yourtoken}/?lang=en&source={zip archive source}&namespace={modul namespace}
+
 How to create a module?
 ---------------
 1. For basic and very simple modules, You can start to learn from this source >> [first_mod](https://github.com/aalfiann/reSlim-modules/tree/master/first_mod)
