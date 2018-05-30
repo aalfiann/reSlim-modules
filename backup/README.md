@@ -7,6 +7,6 @@
 
 ### How to install this module with Packager module reSlim?
 
-1. Zip Archive link >> https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/aalfiann/reSlim-modules/tree/master/backup 
-2. Namespace >> modules/backup
+1. Namespace >> modules/backup 
+2. Zip Archive link >> <br>https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/aalfiann/reSlim-modules/tree/master/backup
 3. Make Ajax GET request to url >> <br>http://yourdomain.com/api/packager/install/zip/safely/{yourusername}/{yourtoken}/?source=https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/aalfiann/reSlim-modules/tree/master/backup&namespace=modules/backup&lang=en
