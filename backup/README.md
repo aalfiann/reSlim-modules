@@ -13,4 +13,4 @@
 ### How to install this module with Packager module reSlim?
 
 1. Only superuser account is able to install the module.
-2. Make Ajax GET request to url >> <br>http://yourdomain.com/api/packager/install/zip/safely/{yourusername}/{yourtoken}/?source=https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/aalfiann/reSlim-modules/tree/master/backup&namespace=modules/backup&lang=en
+2. Make Ajax GET request to url >> <br>http://{yourdomain.com}/api/packager/install/zip/safely/{yourusername}/{yourtoken}/?source=https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/aalfiann/reSlim-modules/tree/master/backup&namespace=modules/backup&lang=en
