@@ -14,12 +14,17 @@ Requirements
 How to install module manually?
 ---------------
 
+1. Download files only from the module folder. (eg. backup/)
+2. Go to your reSlim server and go to directory modules
+3. Create new folder **backup** and paste all files.
+4. Done
+
 How to install module with Packager?
 ---------------
 
 1. Packager module is available since reSlim version 1.10.0
 2. Only superuser account is able to install the module.
-3. Make Ajax GET request to url >> <br>http://{yourdomain.com}/api/packager/install/zip/safely/{yourusername}/{yourtoken}/?lang=en&source={zip archive source}&namespace={modul namespace}
+3. Make Ajax GET request to url >> <br>http://**{yourdomain.com}**/api/packager/install/zip/safely/**{yourusername}**/**{yourtoken}**/?lang=en&source=**{zip archive source}**&namespace=**{modul namespace}**
 
 How to create a module?
 ---------------
