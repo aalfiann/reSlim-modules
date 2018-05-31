@@ -17,7 +17,7 @@ How to create a module?
 1. For basic and very simple modules, You can start to learn from this source >> [first_mod](https://github.com/aalfiann/reSlim-modules-first_mod)
 2. For advanced like CRUD modules, You can start to learn from this source >> [crud_mod](https://github.com/aalfiann/reSlim-modules-crud_mod)
 
-List available modules
+List default modules
 -----------------
 1. Packager  
     A modules to make easy for manage the packages for reSlim  
@@ -26,6 +26,10 @@ List available modules
 2. Backup  
     For handle database backup in reSlim  
     https://github.com/aalfiann/reslim-modules-backup
+
+3. Pages  
+    A module for pages management  
+    https://github.com/aalfiann/reslim-modules-pages
 
 
 How to Contribute
