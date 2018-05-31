@@ -14,8 +14,12 @@ Requirements
 
 How to create a module?
 -----------------
-1. For basic and very simple modules, You can start to learn from this source >> [first_mod](https://github.com/aalfiann/reSlim-modules-first_mod)
-2. For advanced like CRUD modules, You can start to learn from this source >> [crud_mod](https://github.com/aalfiann/reSlim-modules-crud_mod)
+1. For basic and very simple modules,  
+    You can start to learn from this source >> [first_mod](https://github.com/aalfiann/reSlim-modules-first_mod)
+
+2. For advanced like CRUD modules,  
+    You can start to learn from this source >> [crud_mod](https://github.com/aalfiann/reSlim-modules-crud_mod)
+
 
 List default modules
 -----------------
