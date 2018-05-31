@@ -11,25 +11,22 @@ Requirements
 
 1. This feature is available since reSlim version 1.9.0
 
-How to install module manually?
----------------
-
-1. Download files only from the module folder. **(eg. backup/)**
-2. Go to your reSlim server and go to directory modules
-3. Create new folder **backup** and paste all files.
-4. Done
-
-How to install module with Packager?
----------------
-
-1. Packager module is available since reSlim version 1.10.0
-2. Only superuser account is able to install the module.
-3. Make Ajax GET request to url >> <br>http://**{yourdomain.com}**/api/packager/install/zip/safely/**{yourusername}**/**{yourtoken}**/?lang=en&source=**{zip archive source}**&namespace=**{modul namespace}**
 
 How to create a module?
----------------
-1. For basic and very simple modules, You can start to learn from this source >> [first_mod](https://github.com/aalfiann/reSlim-modules/tree/master/first_mod)
-2. For advanced like CRUD modules, You can start to learn from this source >> [crud_mod](https://github.com/aalfiann/reSlim-modules/tree/master/crud_mod)
+-----------------
+1. For basic and very simple modules, You can start to learn from this source >> [first_mod](https://github.com/aalfiann/reSlim-modules-first_mod)
+2. For advanced like CRUD modules, You can start to learn from this source >> [crud_mod](https://github.com/aalfiann/reSlim-modules-crud_mod)
+
+List available modules
+-----------------
+1. Packager
+    A modules to make easy for manage the packages for reSlim
+    - https://github.com/aalfiann/reslim-modules-packager
+    
+2. Backup
+    For handle database backup in reSlim
+    - https://github.com/aalfiann/reslim-modules-backup
+
 
 How to Contribute
 -----------------
