@@ -20,12 +20,12 @@ How to create a module?
 List available modules
 -----------------
 1. Packager  
-    A modules to make easy for manage the packages for reSlim
-    - https://github.com/aalfiann/reslim-modules-packager
+    A modules to make easy for manage the packages for reSlim  
+    https://github.com/aalfiann/reslim-modules-packager
 
 2. Backup  
-    For handle database backup in reSlim
-    - https://github.com/aalfiann/reslim-modules-backup
+    For handle database backup in reSlim  
+    https://github.com/aalfiann/reslim-modules-backup
 
 
 How to Contribute
