@@ -3,8 +3,8 @@ reSlim-modules
 [![Version](https://img.shields.io/badge/reSlim-1.9.0-green.svg)](https://github.com/aalfiann/reSlim)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/aalfiann/reSlim/blob/master/license.md)
 
-reSlim-modules is the list of the modules available from author to be using with reSlim.<br>
-reSlim is based on [Slim Framework version 3](http://www.slimframework.com/).<br>
+reSlim-modules is the feature to integrate other application into reSlim framework.  
+reSlim is based on [Slim Framework version 3](http://www.slimframework.com/).  
 
 Requirements
 ---------------
@@ -32,10 +32,16 @@ List default modules
     https://github.com/aalfiann/reslim-modules-pages
 
 
-How to Contribute
+Other available modules
 -----------------
-### Pull Requests
+1. FirstMod  
+    This is my first reslim modules  
+    https://github.com/aalfiann/reslim-modules-first_mod
 
-1. Fork the reSlim-modules repository
-2. Create a new branch and create new folder for each different modules or improvement
-3. Send a pull request from each branch to the master branch
+2. CrudMod  
+    Example to create crud module in reSlim  
+    https://github.com/aalfiann/reslim-modules-crud_mod
+
+3. Enterprise  
+    Enterprise management system  
+    https://github.com/aalfiann/reslim-modules-enterprise
