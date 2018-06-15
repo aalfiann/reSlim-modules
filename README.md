@@ -35,6 +35,10 @@ List default modules
     A module for pages management  
     https://github.com/aalfiann/reslim-modules-pages
 
+4. Flexible Config  
+    Save unlimited config for flexible use  
+    https://github.com/aalfiann/reslim-modules-flexibleconfig
+
 
 Other available modules
 -----------------
