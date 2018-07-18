@@ -15,7 +15,6 @@ Requirements
 How to create a module?
 -----------------
 
-### Documentation
 * Read [Tutorial Create Module](https://github.com/aalfiann/reSlim/wiki/Tutorial-Create-Module)
 
 * For basic and very simple modules,  
