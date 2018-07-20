@@ -11,6 +11,10 @@ Requirements
 
 1. This feature is available since reSlim version 1.9.0
 
+API Documentation
+---
+Each modules has included postman file for the API Documentation.
+
 
 How to create a module?
 -----------------
@@ -56,3 +60,7 @@ Other available modules
 3. Enterprise  
     Enterprise management system  
     https://github.com/aalfiann/reslim-modules-enterprise
+
+4. Tiki  
+    An alternative API for access data from TIKI  
+    https://github.com/aalfiann/reSlim-modules-tiki
