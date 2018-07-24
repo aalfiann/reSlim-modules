@@ -63,4 +63,8 @@ Other available modules
 
 4. Tiki  
     An alternative API for access data from TIKI  
-    https://github.com/aalfiann/reSlim-modules-tiki
+    https://github.com/aalfiann/reslim-modules-tiki
+
+5. Deposit  
+    Deposit Management System  
+    https://github.com/aalfiann/reslim-modules-deposit
