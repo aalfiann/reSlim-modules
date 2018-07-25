@@ -68,3 +68,7 @@ Other available modules
 5. Deposit  
     Deposit Management System  
     https://github.com/aalfiann/reslim-modules-deposit
+
+6. CargoAgent  
+    Cargo Agent Management System  
+    https://github.com/aalfiann/reslim-modules-cargoagent
