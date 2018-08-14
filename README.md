@@ -27,6 +27,9 @@ How to create a module?
 * For advanced like CRUD modules,  
     You can start to learn from this source >> [crud_mod](https://github.com/aalfiann/reSlim-modules-crud_mod)
 
+* Start to create app with blank or starter package  
+    Save more minutes quickly with just modify this >> [Starter](https://github.com/aalfiann/reSlim-modules-starter) 
+
 
 List default modules
 -----------------
