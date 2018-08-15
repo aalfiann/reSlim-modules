@@ -75,3 +75,7 @@ Other available modules
 6. CargoAgent  
     Cargo Agent Management System  
     https://github.com/aalfiann/reslim-modules-cargoagent
+
+7. EnterpriseCustomer
+    Customer Management for Enterprise System
+    https://github.com/aalfiann/reslim-modules-enterprise_customer
