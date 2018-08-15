@@ -33,49 +33,38 @@ How to create a module?
 
 List default modules
 -----------------
-1. Packager  
-    A modules to make easy for manage the packages for reSlim  
-    https://github.com/aalfiann/reslim-modules-packager
+1. [Packager](https://github.com/aalfiann/reslim-modules-packager)  
+    A modules to make easy for manage the packages for reSlim
 
-2. Backup  
-    For handle database backup in reSlim  
-    https://github.com/aalfiann/reslim-modules-backup
+2. [Backup](https://github.com/aalfiann/reslim-modules-backup)  
+    For handle database backup in reSlim
 
-3. Pages  
-    A module for pages management  
-    https://github.com/aalfiann/reslim-modules-pages
+3. [Pages](https://github.com/aalfiann/reslim-modules-pages)  
+    A module for pages management
 
-4. Flexible Config  
-    Save unlimited config for flexible use  
-    https://github.com/aalfiann/reslim-modules-flexibleconfig
+4. [FlexibleConfig](https://github.com/aalfiann/reslim-modules-flexibleconfig)  
+    Save unlimited config for flexible use
 
 
 Other available modules
 -----------------
-1. FirstMod  
-    This is my first reslim modules  
-    https://github.com/aalfiann/reslim-modules-first_mod
+1. [FirstMod](https://github.com/aalfiann/reslim-modules-first_mod)  
+    This is my first reslim modules
 
-2. CrudMod  
-    Example to create crud module in reSlim  
-    https://github.com/aalfiann/reslim-modules-crud_mod
+2. [CrudMod](https://github.com/aalfiann/reslim-modules-crud_mod)  
+    Example to create crud module in reSlim
 
-3. Enterprise  
-    Enterprise management system  
-    https://github.com/aalfiann/reslim-modules-enterprise
+3. [Enterprise](https://github.com/aalfiann/reslim-modules-enterprise)  
+    Enterprise management system
 
-4. Tiki  
-    An alternative API for access data from TIKI  
-    https://github.com/aalfiann/reslim-modules-tiki
+4. [Tiki](https://github.com/aalfiann/reslim-modules-tiki)  
+    An alternative API for access data from TIKI
 
-5. Deposit  
-    Deposit Management System  
-    https://github.com/aalfiann/reslim-modules-deposit
+5. [Deposit](https://github.com/aalfiann/reslim-modules-deposit)  
+    Deposit Management System
 
-6. CargoAgent  
-    Cargo Agent Management System  
-    https://github.com/aalfiann/reslim-modules-cargoagent
+6. [CargoAgent](https://github.com/aalfiann/reslim-modules-cargoagent)  
+    Cargo Agent Management System
 
-7. EnterpriseCustomer  
-    Customer Management for Enterprise System  
-    https://github.com/aalfiann/reslim-modules-enterprise_customer
+7. [EnterpriseCustomer](https://github.com/aalfiann/reslim-modules-enterprise_customer)  
+    Customer Management for Enterprise System
