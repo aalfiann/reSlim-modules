@@ -68,3 +68,6 @@ Other available modules
 
 7. [EnterpriseCustomer](https://github.com/aalfiann/reslim-modules-enterprise_customer)  
     Customer Management for Enterprise System
+
+8. [MyAnimeList](https://github.com/aalfiann/reslim-modules-myanimelist)  
+    Unofficial MyAnimeList API
