@@ -71,3 +71,6 @@ Other available modules
 
 8. [MyAnimeList](https://github.com/aalfiann/reslim-modules-myanimelist)  
     Unofficial MyAnimeList API
+
+9. [Translator](https://github.com/aalfiann/reslim-modules-translator)  
+    Make translation to any languages for free.
