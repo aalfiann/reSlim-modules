@@ -74,3 +74,6 @@ Other available modules
 
 9. [Translator](https://github.com/aalfiann/reslim-modules-translator)  
     Make translation to any languages for free.
+
+10. [Invoice](https://github.com/aalfiann/reslim-modules-invoice)  
+    Invoice Management System
