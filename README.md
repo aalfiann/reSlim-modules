@@ -77,3 +77,6 @@ Other available modules
 
 10. [Invoice](https://github.com/aalfiann/reslim-modules-invoice)  
     Invoice Management System
+
+11. [ProxyList](https://github.com/aalfiann/reslim-modules-proxylist)  
+    Get working public proxy list for free.
