@@ -80,3 +80,6 @@ Other available modules
 
 11. [ProxyList](https://github.com/aalfiann/reslim-modules-proxylist)  
     Get working public proxy list for free.
+
+12. [ImageHoster](https://github.com/aalfiann/reslim-modules-imagehoster)  
+    Simple Host Your Images for free and unlimited.
