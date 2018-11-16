@@ -22,10 +22,10 @@ How to create a module?
 * Read [Tutorial Create Module](https://github.com/aalfiann/reSlim/wiki/Tutorial-Create-Module)
 
 * For basic and very simple modules,  
-    You can start to learn from this source >> [first_mod](https://github.com/aalfiann/reSlim-modules-first_mod)
+    You can start to learn from this source >> [FirstMod](https://github.com/aalfiann/reSlim-modules-first_mod)
 
 * For advanced like CRUD modules,  
-    You can start to learn from this source >> [crud_mod](https://github.com/aalfiann/reSlim-modules-crud_mod)
+    You can start to learn from this source >> [CrudMod](https://github.com/aalfiann/reSlim-modules-crud_mod)
 
 * Start to create app with blank or starter package  
     Save more minutes quickly with just modify this >> [Starter](https://github.com/aalfiann/reSlim-modules-starter) 
@@ -83,3 +83,6 @@ Other available modules
 
 12. [ImageHoster](https://github.com/aalfiann/reslim-modules-imagehoster)  
     Simple Host Your Images for free and unlimited.
+
+13. [CrudModAdv](https://github.com/aalfiann/reslim-modules-crud_mod_adv)  
+    Example to create advanced crud module in reSlim.
