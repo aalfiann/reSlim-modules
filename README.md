@@ -9,7 +9,7 @@ reSlim is based on [Slim Framework version 3](http://www.slimframework.com/).
 Requirements
 ---------------
 
-1. This feature is available since reSlim version 1.9.0
+1. This feature is available since reSlim `v1.9.0`. But because so many feature has already improvement massively, it's recommended to upgrade reSlim at least `v1.16.0`.
 
 API Documentation
 ---
@@ -21,14 +21,21 @@ How to create a module?
 
 * Read [Tutorial Create Module](https://github.com/aalfiann/reSlim/wiki/Tutorial-Create-Module)
 
-* For basic and very simple modules,  
+* Learn by create a very simple module,  
     You can start to learn from this source >> [FirstMod](https://github.com/aalfiann/reSlim-modules-first_mod)
 
-* For advanced like CRUD modules,  
+* Learn by create a simple CRUD module with database,  
     You can start to learn from this source >> [CrudMod](https://github.com/aalfiann/reSlim-modules-crud_mod)
 
-* Start to create app with blank or starter package  
-    Save more minutes quickly with just modify this >> [Starter](https://github.com/aalfiann/reSlim-modules-starter) 
+
+Create a module faster with boilerplate
+-----------------
+
+* Start to create app/module with blank or starter package  
+    Save more minutes quickly with just modify this >> [Starter](https://github.com/aalfiann/reSlim-modules-starter)
+
+* Start to create app/module with Advanced CRUD
+    Save more minutes quickly with just modify this >> [CrudModAdv](https://github.com/aalfiann/reslim-modules-crud_mod_adv)
 
 
 List default modules
@@ -83,6 +90,3 @@ Other available modules
 
 12. [ImageHoster](https://github.com/aalfiann/reslim-modules-imagehoster)  
     Simple Host Your Images for free and unlimited.
-
-13. [CrudModAdv](https://github.com/aalfiann/reslim-modules-crud_mod_adv)  
-    Example to create advanced crud module in reSlim.
