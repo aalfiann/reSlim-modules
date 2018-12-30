@@ -55,38 +55,32 @@ List default modules
 
 Other available modules
 -----------------
-1. [FirstMod](https://github.com/aalfiann/reslim-modules-first_mod)  
-    This is my first reslim modules
-
-2. [CrudMod](https://github.com/aalfiann/reslim-modules-crud_mod)  
-    Example to create crud module in reSlim
-
-3. [Enterprise](https://github.com/aalfiann/reslim-modules-enterprise)  
+1. [Enterprise](https://github.com/aalfiann/reslim-modules-enterprise)  
     Enterprise management system
 
-4. [Tiki](https://github.com/aalfiann/reslim-modules-tiki)  
+2. [Tiki](https://github.com/aalfiann/reslim-modules-tiki)  
     An alternative API for access data from TIKI
 
-5. [Deposit](https://github.com/aalfiann/reslim-modules-deposit)  
+3. [Deposit](https://github.com/aalfiann/reslim-modules-deposit)  
     Deposit Management System
 
-6. [CargoAgent](https://github.com/aalfiann/reslim-modules-cargoagent)  
+4. [CargoAgent](https://github.com/aalfiann/reslim-modules-cargoagent)  
     Cargo Agent Management System
 
-7. [EnterpriseCustomer](https://github.com/aalfiann/reslim-modules-enterprise_customer)  
+5. [EnterpriseCustomer](https://github.com/aalfiann/reslim-modules-enterprise_customer)  
     Customer Management for Enterprise System
 
-8. [MyAnimeList](https://github.com/aalfiann/reslim-modules-myanimelist)  
+6. [MyAnimeList](https://github.com/aalfiann/reslim-modules-myanimelist)  
     Unofficial MyAnimeList API
 
-9. [Translator](https://github.com/aalfiann/reslim-modules-translator)  
+7. [Translator](https://github.com/aalfiann/reslim-modules-translator)  
     Make translation to any languages for free.
 
-10. [Invoice](https://github.com/aalfiann/reslim-modules-invoice)  
+8. [Invoice](https://github.com/aalfiann/reslim-modules-invoice)  
     Invoice Management System
 
-11. [ProxyList](https://github.com/aalfiann/reslim-modules-proxylist)  
+9. [ProxyList](https://github.com/aalfiann/reslim-modules-proxylist)  
     Get working public proxy list for free.
 
-12. [ImageHoster](https://github.com/aalfiann/reslim-modules-imagehoster)  
+10. [ImageHoster](https://github.com/aalfiann/reslim-modules-imagehoster)  
     Simple Host Your Images for free and unlimited.
