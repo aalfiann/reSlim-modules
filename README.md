@@ -31,10 +31,10 @@ How to create a module?
 Create a module faster with boilerplate
 -----------------
 
-* Start to create app/module with blank or starter package  
+* Start to create app/module with starter package  
     Save more minutes quickly with just modify this >> [Starter](https://github.com/aalfiann/reSlim-modules-starter)
 
-* Start to create app/module with Advanced CRUD
+* Start to create app/module with Advanced CRUD package  
     Save more minutes quickly with just modify this >> [CrudModAdv](https://github.com/aalfiann/reslim-modules-crud_mod_adv)
 
 
