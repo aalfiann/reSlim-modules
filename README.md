@@ -84,3 +84,6 @@ Other available modules
 
 10. [ImageHoster](https://github.com/aalfiann/reslim-modules-imagehoster)  
     Simple Host Your Images for free and unlimited.
+
+11. [Genuid](https://github.com/aalfiann/reslim-modules-genuid)  
+    Generates Unique IDentifiers used to identify information in computer systems.
